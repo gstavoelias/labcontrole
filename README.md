@@ -1,2 +1,3 @@
-# labcontrole
-Trabalho final de Laboratório de Controle
+# Projeto final: Laboratório de Controle
+Controle automático do nível de água em um tanque, utilizando Arduino
+
