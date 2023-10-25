@@ -22,18 +22,18 @@ for i in range (600):
     time.sleep(0.1)
 ser.close()
 
+#EIXO X 
 x = np.linspace(0.01, 40, 600)
+fig = go.Figure(data=go.Scatter(y=y, x=x, name="luis"), layout_xaxis_range=[0,40])
 
+#CURVA AJUSTADA
 def objective(x, a, b):
   return 2.718281**(((-1/(b*a))*x))/a + 5
-
 
 popt, _ = curve_fit(objective, x, y)
 
 a,b = popt
 print('y = %.5f * x + %.5f' % (a, b))
-fig = go.Figure(data=go.Scatter(y=y, x=x, name="luis"), layout_xaxis_range=[0,40])
-# fig.show()
 
 x_line = arange(min(x), max(x), 1)
 y_line = objective(x_line, a, b)
