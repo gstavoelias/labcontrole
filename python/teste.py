@@ -5,16 +5,18 @@ from scipy.optimize import curve_fit
 import numpy as np
 import random
 
+#CONFIGURA A COMUNICAÇÃO SERIAL
+
 ser = serial.Serial('COM9', 9600)
 time.sleep(2)
 
-#PLOTTER SERIAL 
+#LEITURA E ARMAZENAMENTO DOS DADOS 
 y = []
-for i in range (600):
-    b = ser.readline()
-    string_n = b.decode()
-    string = string_n.rstrip()
-    flt = float(string)
+for i in range (600): 
+    b = ser.readline() #Lê um byte
+    string_n = b.decode() #Decodifica
+    string = string_n.rstrip() #Remove \n e \r
+    flt = float(string) #Transforma string em float
     # print(flt)
     y.append(flt)
     time.sleep(0.1)
