@@ -42,7 +42,7 @@
  Serial . println ( filtrado );// printa a saida filtrada
 
  delay (250) ;
- motor . set_motors (0 , 100) ;
+ motor . set_motors (0 , 1000) ;
 
  while (d < 5 || d > 18) {
  long microsec = ultrassonico . timing () ;
