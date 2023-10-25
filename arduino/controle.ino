@@ -43,7 +43,7 @@ void loop() {
   Serial.println(filtrado);//printa a saída filtrada
 
   delay(250); 
-  motor.set_motors(0, 100);
+  motor.set_motors(0, 1000);
 
   
 
