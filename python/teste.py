@@ -24,7 +24,7 @@ ser.close()
 
 #EIXO X 
 x = np.linspace(0.01, 40, 600)
-fig = go.Figure(data=go.Scatter(y=y, x=x, name="luis"), layout_xaxis_range=[0,40])
+fig = go.Figure(data=go.Scatter(y=y, x=x, name="Dados obtidos"), layout_xaxis_range=[0,40])
 
 #CURVA AJUSTADA
 def objective(x, a, b):
@@ -37,5 +37,5 @@ print('y = %.5f * x + %.5f' % (a, b))
 
 x_line = arange(min(x), max(x), 1)
 y_line = objective(x_line, a, b)
-fig.add_trace(go.Scatter(y=y_line, x=x_line, name="acyr"))
+fig.add_trace(go.Scatter(y=y_line, x=x_line, name="Curva ajustada"))
 fig.show()
