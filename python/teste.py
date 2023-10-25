@@ -10,7 +10,7 @@ time.sleep(2)
 
 #PLOTTER SERIAL 
 y = []
-for i in range (50):
+for i in range (600):
     b = ser.readline()
     string_n = b.decode()
     string = string_n.rstrip()
